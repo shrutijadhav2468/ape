@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APE | Hello</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px;
+           margin: 2rem auto; padding: 0 1rem; }
+    input[type=range] { width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>Hello EE</h1>
+  <input type="range" id="duty" min="0" max="100" value="50">
+  <p>Duty cycle: <span id="out">50</span>%</p>
+  <script>
+    document.getElementById("duty").oninput = function () {
+      document.getElementById("out").textContent = this.value;
+    };
+  </script>
+</body>
+</html>
